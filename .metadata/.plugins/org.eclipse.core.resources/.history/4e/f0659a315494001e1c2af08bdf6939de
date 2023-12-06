@@ -1,0 +1,93 @@
+public interface Calculable {
+    double calcularArea();
+}
+
+
+// Square.java
+public class Square implements Calculable {
+    private double lado;
+
+    public Square(double lado) {
+        this.lado = lado;
+    }
+
+    @Override
+    public double calcularArea() {
+        return lado * lado;
+    }
+}
+
+
+// Rectangle.java
+public class Rectangle implements Calculable {
+    private double comprimento;
+    private double largura;
+
+    public Rectangle(double comprimento, double largura) {
+        this.comprimento = comprimento;
+        this.largura = largura;
+    }
+
+    @Override
+    public double calcularArea() {
+        return comprimento * largura;
+    }
+}
+
+
+
+
+// Circle.java
+public class Circle implements Calculable {
+    private double raio;
+
+    public Circle(double raio) {
+        this.raio = raio;
+    }
+
+    @Override
+    public double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+}
+
+
+
+
+--------------
+// ShapeFactory.java
+public interface ShapeFactory {
+    Calculable createShape();
+}
+
+// SquareFactory.java
+public class SquareFactory implements ShapeFactory {
+    private double lado;
+
+    public SquareFactory(double lado) {
+        this.lado = lado;
+    }
+
+    @Override
+    public Calculable createShape() {
+        return new Square(lado);
+    }
+}
+
+
+// RectangleFactory.java
+public class RectangleFactory implements ShapeFactory {
+    private double comprimento;
+    private double largura;
+
+    public RectangleFactory(double comprimento, double largura) {
+        this.comprimento = comprimento;
+        this.largura = largura;
+    }
+
+    @Override
+    public Calculable createShape() {
+        return new Rectangle(comprimento, largura);
+    }
+}
+
