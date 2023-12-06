@@ -1,0 +1,147 @@
+public class Produto {
+    private String nome;
+    private String unidade;
+    private String descricao;
+    private double preco;
+    private double descontoMaximo;
+    private Supermercado supermercado;
+
+    public Produto(Supermercado supermercado) {
+        this.supermercado = supermercado;
+    }
+
+    // Getters e Setters para os atributos da classe Produto
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public double getDescontoMaximo() {
+        return descontoMaximo;
+    }
+
+    public void setDescontoMaximo(double descontoMaximo) {
+        this.descontoMaximo = descontoMaximo;
+    }
+
+    public Supermercado getSupermercado() {
+        return supermercado;
+    }
+
+    public void setSupermercado(Supermercado supermercado) {
+        this.supermercado = supermercado;
+    }
+
+    @Override
+    public String toString() {
+        // Implemente a lógica desejada para a representação em String do objeto Produto
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", unidade='" + unidade + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", preco=" + preco +
+                ", descontoMaximo=" + descontoMaximo +
+                ", supermercado=" + supermercado +
+                '}';
+    }
+}
+
+public class Supermercado {
+    private String nome;
+
+    // Getters e Setters para o atributo da classe Supermercado
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+
+public class ItemCompra {
+    private int quantidade;
+    private Produto produto;
+    private double desconto;
+
+    // Getters e Setters para os atributos da classe ItemCompra
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
+
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
+    }
+}
+
+public class ItemCompraProduto {
+    private Produto produto;
+    private double desconto;
+
+    // Getters e Setters para os atributos da classe ItemCompraProduto
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
+
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
+    }
+}
+
+public class CalculadoraPreco {
+    public double calcularPreco() {
+        // Implemente a lógica desejada para calcular o preço
+        return 0.0;
+    }
+}
